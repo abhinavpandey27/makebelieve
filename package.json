@@ -1,7 +1,7 @@
 {
-  "name": "yatas",
+  "name": "makebelieve",
   "version": "0.0.1",
-  "description": "Yet Another Tailwind Apline Starter",
+  "description": "Website of Abhinav Pandey",
   "scripts": {
     "clean": "del _site",
     "watch-css": "npx tailwindcss -i ./assets/css/styles.css -o ./_site/css/styles.css -w",
