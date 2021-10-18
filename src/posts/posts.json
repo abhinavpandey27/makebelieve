@@ -1,0 +1,7 @@
+{
+    "layout": "layouts/single",
+    "permalink": "/blog/{{ title | slug }}/index.html",
+    "tags": ["posts"]
+  }
+  
+
