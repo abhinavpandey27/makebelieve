@@ -4,16 +4,16 @@ layout: layouts/base.njk
 
 
 
-<div class="grid grid-cols-1 lg:grid-cols-12">
+<div class="dark:bg-gray-900 grid grid-cols-1 lg:grid-cols-12">
 <div class="sticky lg:col-span-4 xl:col-span-3">
-    <aside class="prose">
+    <aside class="prose dark:prose-dark">
     {{ content | toc | safe }}
     </aside>
 </div>
 
 <div class="lg:col-span-8 xl:col-span-9">
 
-<article class="prose max-w-prose">
+<article class="prose dark:prose-dark max-w-none">
   {{ content | safe }}
 </article>
 

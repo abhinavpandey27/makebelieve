@@ -5,7 +5,7 @@ tags: 'UX'
 ---
 
 # Project Overview 👀
-----
+
 
 **Context:** Personal Project
 
@@ -27,7 +27,7 @@ As a Pocket user myself, I find myself doing the same thing. There is **no incen
 
 During my intensive usage of the app for research and understanding purposes, I found out some other features of the app can be improved too. In this case study, I have also documented **improvements for one such feature - the discover tab.**
 
-
+<hr>
 
 # Introduction
 

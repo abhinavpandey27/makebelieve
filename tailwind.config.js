@@ -1,21 +1,30 @@
+const colors = require('tailwindcss/colors')
+const { width } = require('tailwindcss/defaultTheme')
+
 module.exports = {
   mode: 'jit',
   purge: ['./src/**/*.njk', './src/**/*.md',],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
-            typography: (theme) => ({
+      typography: (theme) => ({
         DEFAULT: {
           css: {
+            p :
+            {
+              maxWidth: '65ch',
+            },
+            
             color: theme('colors.gray.700'),
             a: {
-              color: theme('colors.primary.500'),
+              color: theme('colors.blue.500'),
               '&:hover': {
-                color: theme('colors.primary.600'),
+                color: theme('colors.blue.600'),
               },
               code: { color: theme('colors.primary.400') },
             },
             h1: {
+              fontSize: '4rem',
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
               color: theme('colors.gray.900'),
@@ -66,9 +75,9 @@ module.exports = {
           css: {
             color: theme('colors.gray.300'),
             a: {
-              color: theme('colors.primary.500'),
+              color: theme('colors.blue.500'),
               '&:hover': {
-                color: theme('colors.primary.400'),
+                color: theme('colors.blue.400'),
               },
               code: { color: theme('colors.primary.400') },
             },
