@@ -10,11 +10,6 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            p :
-            {
-              maxWidth: '65ch',
-            },
-            
             color: theme('colors.gray.700'),
             a: {
               color: theme('colors.blue.500'),
@@ -24,7 +19,6 @@ module.exports = {
               code: { color: theme('colors.primary.400') },
             },
             h1: {
-              fontSize: '4rem',
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
               color: theme('colors.gray.900'),
@@ -69,6 +63,7 @@ module.exports = {
               color: theme('colors.gray.900'),
               borderLeftColor: theme('colors.gray.200'),
             },
+
           },
         },
         dark: {
@@ -122,6 +117,7 @@ module.exports = {
               color: theme('colors.gray.100'),
               borderLeftColor: theme('colors.gray.700'),
             },
+            
           },
         },
       }),

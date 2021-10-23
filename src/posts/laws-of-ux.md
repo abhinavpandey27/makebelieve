@@ -19,7 +19,14 @@ tags: 'UX'
 
 One day I was scrolling through Twitter when I stumbled upon a tweet by Austen Allred (CEO of Lambda School) on Pocket.
 
+![sjcj](/img/abhinav.jpg)
 
+<img
+          src="/img/abhinav.jpg"
+          alt="{{ lkdklc}}"
+          loading="lazy"
+          class="radius"
+        />
 
 
 
