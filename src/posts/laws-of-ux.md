@@ -51,7 +51,7 @@ Imagine this - you were on your daily rabbit hole exploration. You had several c
 
 Austen’s tweet (which is now deleted :/) received around ~126 comments. Everyone chiming in with their views, unsurprisingly, almost everyone agreed with it. A tweet having **~126 comments** about a product is itself a gold mine for a product designer. In the comments, the users have explained their problems verbosely. They **did not shy away from expressing their experience** of using the product. This tweet became my main source for user research.
 
-
+----
 
 # Research 🧠
 
@@ -84,7 +84,7 @@ To increase the time spent, we should focus on increasing the articles that are 
 
 Articles like type B are *useful articles.* Reading these articles inside the Pocket app will make users realize the need for premium features. (I would want to highlight ‘how to prepare for a PM interview’ and not ‘why having a Husky as a pet makes you related to Jon Snow’). After a threshold of reading many type B articles inside the app, a user would want to convert into a paying premium user. Essentially, these type B articles become the trigger for buying the premium. Hence, I am calling these articles ‘monetizable articles’.
 
-
+----
 
 # Opportunities to Improve
 

@@ -1,5 +1,6 @@
 const colors = require('tailwindcss/colors')
 const { width } = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   mode: 'jit',
@@ -7,10 +8,32 @@ module.exports = {
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        karla: ["'Karla'", ...defaultTheme.fontFamily.sans],
+        inter: ["'Inter'", ...defaultTheme.fontFamily.sans],
+        ftp: ["'freight-text-pro'", ...defaultTheme.fontFamily.serif],
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
             color: theme('colors.gray.700'),
+
+            p:{
+              maxWidth: '65ch',
+              fontSize: '1.1rem',
+              lineHeight: '1.6'
+            },
+            ul:{
+              maxWidth: '65ch',
+              fontSize: '1.1rem',
+            },
+            li:{
+              maxWidth: '65ch',
+              fontSize: '1.1rem',
+            },
+
+
+
             a: {
               color: theme('colors.blue.500'),
               '&:hover': {
@@ -20,19 +43,23 @@ module.exports = {
             },
             h1: {
               fontWeight: '700',
+              maxWidth: '600px',
               letterSpacing: theme('letterSpacing.tight'),
               color: theme('colors.gray.900'),
             },
             h2: {
               fontWeight: '700',
+              maxWidth: '600px',
               letterSpacing: theme('letterSpacing.tight'),
               color: theme('colors.gray.900'),
             },
             h3: {
               fontWeight: '600',
+              maxWidth: '600px',
               color: theme('colors.gray.900'),
             },
             'h4,h5,h6': {
+              maxWidth: '600px',
               color: theme('colors.gray.900'),
             },
             code: {
