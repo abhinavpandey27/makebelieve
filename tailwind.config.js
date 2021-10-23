@@ -16,12 +16,13 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
+
             color: theme('colors.gray.700'),
 
             p:{
               maxWidth: '65ch',
               fontSize: '1.1rem',
-              lineHeight: '1.6'
+              lineHeight: '1.68'
             },
             ul:{
               maxWidth: '65ch',
@@ -42,6 +43,7 @@ module.exports = {
               code: { color: theme('colors.primary.400') },
             },
             h1: {
+              fontFamily: 'karla',
               fontWeight: '700',
               maxWidth: '600px',
               letterSpacing: theme('letterSpacing.tight'),
