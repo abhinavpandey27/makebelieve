@@ -5,6 +5,7 @@ const markdownitlinkatt = require('markdown-it-link-attributes')
 const markdownItAnchor = require('markdown-it-anchor')
 
 
+
 module.exports = function(eleventyConfig) {
   /**
    * Files to copy
@@ -12,6 +13,9 @@ module.exports = function(eleventyConfig) {
    */
   eleventyConfig.addPassthroughCopy('src/img')
 
+  const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  
   /**
    * HTML Minifier for production builds
    */

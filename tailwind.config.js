@@ -8,17 +8,39 @@ module.exports = {
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
+      maxWidth: {
+        '8xl': '90rem',
+       },
+       colors: {
+        transparent: 'transparent',
+        current: 'currentColor',
+        bgblue: {
+          DEFAULT: '#252B30',
+          dark: '#1F2326',
+        },
+        pink: {
+          light: '#ff7ce5',
+          DEFAULT: '#ff49db',
+          dark: '#ff16d1',
+        },
+        gray: {
+          darkest: '#1f2d3d',
+          dark: '#3c4858',
+          DEFAULT: '#c0ccda',
+          light: '#e0e6ed',
+          lightest: '#f9fafc',
+        },
+      },
       fontFamily: {
         karla: ["'Karla'", ...defaultTheme.fontFamily.sans],
-        inter: ["'Inter'", ...defaultTheme.fontFamily.sans],
-        ftp: ["'freight-text-pro'", ...defaultTheme.fontFamily.serif],
+        inter: ["'Inter var'", ...defaultTheme.fontFamily.sans],
+        OpenSauceSans: ["'Open Sauce Sans'", ...defaultTheme.fontFamily.sans],
       },
       typography: (theme) => ({
         DEFAULT: {
           css: {
-
             color: theme('colors.gray.700'),
-
+            fontFamily: 'inter',
             p:{
               maxWidth: '65ch',
               fontSize: '1.1rem',
