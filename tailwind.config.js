@@ -15,13 +15,14 @@ module.exports = {
         transparent: 'transparent',
         current: 'currentColor',
         bgblue: {
-          DEFAULT: '#252B30',
-          dark: '#1F2326',
+          DEFAULT: '#23282D',
+          dark: '#1C1F22',
         },
-        pink: {
-          light: '#ff7ce5',
-          DEFAULT: '#ff49db',
-          dark: '#ff16d1',
+        fgreen: {
+          DEFAULT: '#B9F073',
+        },
+        bggray: {
+          DEFAULT:'#ECECEC',
         },
         gray: {
           darkest: '#1f2d3d',
@@ -39,7 +40,7 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.gray.700'),
+            color: theme('colors.gray.800'),
             fontFamily: 'inter',
             p:{
               maxWidth: '65ch',
@@ -55,6 +56,10 @@ module.exports = {
               fontSize: '1.1rem',
             },
 
+            img:{
+              width:'100%',
+            },
+
 
 
             a: {
@@ -65,7 +70,7 @@ module.exports = {
               code: { color: theme('colors.primary.400') },
             },
             h1: {
-              fontFamily: 'karla',
+              paddingTop:'.2rem',
               fontWeight: '700',
               maxWidth: '600px',
               letterSpacing: theme('letterSpacing.tight'),
@@ -119,7 +124,7 @@ module.exports = {
         },
         dark: {
           css: {
-            color: theme('colors.gray.300'),
+            color: theme('colors.gray.200'),
             a: {
               color: theme('colors.blue.500'),
               '&:hover': {

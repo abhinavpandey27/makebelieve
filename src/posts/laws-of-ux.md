@@ -28,7 +28,12 @@ One day I was scrolling through Twitter when I stumbled upon a tweet by Austen A
           class="radius"
         />
 
-
+<img
+          src="/img/image 8.png"
+          alt="{{ lkdklc}}"
+          loading="lazy"
+          class="radius"
+        />
 
 As a Pocket user myself, I find myself doing the same thing. There is **no incentive** for users to go back and read the saved articles. As an upcoming product designer, inspired by this, I decided to **redesign the Pocket** app to accommodate incentives for people to read inside the app **regularly**. This case study documents my process of doing so.
 

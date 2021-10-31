@@ -1,17 +1,60 @@
 <!-- add navigation and stuff-->
 
-<div x-data="{navbarOpen: false}" class="max-w-full mx-auto my-auto dark:bg-bgblue-dark">
+<div class="w-full max-w-full mx-auto my-auto bg-bgblue-dark">
 
-<div class="max-w-8xl mx-auto py-4 md:py-8 xl:py-12 px-4 lg:px-12 xl:px-12 2xl:px-2">
+<div class="max-w-full mx-auto h-1 md:h-1 bg-fgreen">
 
-    <header class="flex  max-w-8xl mx-auto justify-between items-start ">
+</div>
+
+
+
+<div class="max-w-8xl mx-auto h-auto py-4 md:py-4 px-4 lg:px-12 xl:px-12 2xl:px-2">
+
+<div class="">
+
+<header class="flex flex-column md:flex-row max-w-8xl mx-auto justify-between items-start">
+
+
+    <a href='/'
+    class="text-base md:text-lg font-OpenSauceSans text-gray-100 font-inter tracking-tight font-bold">
+    Abhinav Pandey
+    </a>
+
+
+    <nav class="flex justify-between max-w-16">
+
+
+    {% set navPages = collections.all | eleventyNavigation %}
+    <ul class="flex flex-row space-x-4 md:space-x-8 divide-x-0 divide-gray-100">
+    {% for entry in navPages %}
+    <li{% if entry.url == page.url %} class="text-fgreen hover:bg-red-200 text-sm md:text-base font-OpenSauceSans font-medium tracking-tight"{% else %} class="text-sm md:text-base  text-gray-50 font-OpenSauceSans font-medium tracking-tight"{% endif %}>
+        <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+    </li>
+    {% endfor %}
+    </ul>
+
+    </nav>
+
+
+
+
+</header>
+
+
+</div>
+
+
+
+
+<!-- add navigation and stuff
+    <header x-data="{navbarOpen: false}" class="flex max-w-8xl bg-red-500 mx-auto justify-between items-start ">
 
     <a href='/'
     class="text-xl md:text-2xl text-gray-800 dark:text-gray-100 font-OpenSauceSans tracking-tight font-bold">
     Abhinav Pandey
     </a>
 
-    <nav>
+    <nav class="flex justify-between max-w-16">
     <button class="md:hidden" @click="navbarOpen = !navbarOpen">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 fill-current text-gray-800 dark:text-gray-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -20,7 +63,7 @@
     </button>
 
     {% set navPages = collections.all | eleventyNavigation %}
-    <ul class="fixed left-0 right-0 min-h-screen bg-gray-100 dark:bg-bgblue top-16 space-y-4 p-4 transform translate-x-0 transition duration-500
+    <ul class="left-0 right-0 min-h-screen bg-gray-100 dark:bg-bgblue space-y-4 p-4 transform translate-x-0 transition duration-500
                 md:relative md:flex md:min-h-0 md:space-y-0 md:space-x-6 md:p-0 md:top-auto md:translate-y-0 md:dark:bg-bgblue-dark"
                 :class="{'translate-x-full': !navbarOpen, 'translate-x-0': navbarOpen,}">
     {% for entry in navPages %}
@@ -34,10 +77,10 @@
 
 
     </header>
+-->
+
 
 
 </div>
-
-
 
 </div> 
