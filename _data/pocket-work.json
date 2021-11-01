@@ -1,0 +1,19 @@
+{
+    "items": [
+
+
+      {
+        "slideTitle": "Introduction",
+        "image": "/img/abhinav.jpg",
+        "slideText": ""
+      },
+      {
+        "text": "Blog",
+        "url": "/blog/"
+      },
+      {
+        "text": "Cool Links",
+        "url": "/cool-links/"
+      }
+    ]
+  }

@@ -17,4 +17,9 @@ projectOverview:
   deliverables: 'User Research, User Experience Design, Interaction Design, Visual Design and Prototyping'
   timeline: '3 Weeks (April 2021)'
   tools: 'Pen, Paper, and Figma'
+slide1:
+  title: 'Introduction'
+  image: '/img/abhinav@0.3x.jpg'
+
+
 ---

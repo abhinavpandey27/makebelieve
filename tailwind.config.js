@@ -1,3 +1,4 @@
+const { normalizeReference } = require('markdown-it/lib/common/utils')
 const colors = require('tailwindcss/colors')
 const { width } = require('tailwindcss/defaultTheme')
 const defaultTheme = require('tailwindcss/defaultTheme')
@@ -8,6 +9,7 @@ module.exports = {
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
+      animation: ['hover', 'focus'],
       maxWidth: {
         '8xl': '90rem',
        },
@@ -18,11 +20,15 @@ module.exports = {
           DEFAULT: '#23282D',
           dark: '#1C1F22',
         },
+        fred: {
+          DEFAULT: '#D41616',
+        },
         fgreen: {
           DEFAULT: '#B9F073',
         },
         bggray: {
           DEFAULT:'#ECECEC',
+          dark: '#E4E4E4'
         },
         gray: {
           darkest: '#1f2d3d',
@@ -63,9 +69,10 @@ module.exports = {
 
 
             a: {
-              color: theme('colors.blue.500'),
+              color: '#D41616',
+              textDecoration: 'none',
               '&:hover': {
-                color: theme('colors.blue.600'),
+                color: '#8D1313',
               },
               code: { color: theme('colors.primary.400') },
             },

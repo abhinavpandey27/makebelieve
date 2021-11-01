@@ -58,13 +58,14 @@ module.exports = function(eleventyConfig) {
       html:true,
       linkify: true,
       typographer: true,
-			permalink: true,
-			permalinkClass: 'direct-link text-gray-400 dark:text-gray-600',
+		/*	permalink: true,
+			permalinkClass: 'no-underline direct-link text-gray-400 dark:text-gray-600',
 			permalinkSymbol: '#',
+      visuallyHiddenClass: 'visually-hidden',
 			permalinkAttrs: (slug, state) => ({
 				'aria-label': `permalink to ${slug}`,
 				title: 'Anchor link for easy sharing.'
-			})
+			}) */
 		})
 	eleventyConfig.setLibrary('md', markdownLibrary)
 

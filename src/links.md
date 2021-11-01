@@ -5,5 +5,7 @@ metaTitle: Abhinav Pandey - A product enthusiast from India
 metaDescription: Designer that sometimes get his code to work.
 title: 'Abhinav Pandey'
 description: Designer that sometimes get his code to work.
-eleventyExcludeFromCollections: true
+eleventyNavigation:
+  key: Links
 ---
+

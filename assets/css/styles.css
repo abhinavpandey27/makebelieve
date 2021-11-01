@@ -113,4 +113,76 @@
         font-display: swap;
         src: url("src/fonts/OpenSauceSans-BlackItalic.woff") format("woff");
       }
+
+
+      .toc>ol{
+        font-family: 'Inter var';
+        font-weight: 400;
+        font-size: 100%;
+        line-height: 2;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+
+      @media (prefers-color-scheme: dark) {
+        .toc>ol{
+          font-family: 'Inter var';
+          font-weight: 400;
+          font-size: 100%;
+          line-height: 2;
+          margin-left: auto;
+          margin-right: auto;
+          color: #e5e7eb;
+        }
+      }
+
+      .toc li{
+        font-family: 'Inter var';
+        font-weight: 700;
+        font-size: 100%;
+        line-height: 1.5;
+        margin-left: auto;
+        padding-top:1rem;
+        margin-right: auto;
+        color: #1f2937;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .toc li{
+          font-family: 'Inter var';
+          font-weight: 700;
+          font-size: 100%;
+          line-height: 1.5;
+          margin-left: auto;
+          padding-top:1rem;
+          margin-right: auto;
+          color: #e5e7eb;
+        }
+      }
+
+      .toc>ol>li>ol>li{
+        font-family: 'Inter var';
+        font-weight: 400;
+        font-size: 80%;
+        line-height: 1.5;
+        margin-left: auto;
+        padding-left: 1rem;
+        margin-right: auto;
+        color: #1f2937;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .toc>ol>li>ol>li{
+          font-family: 'Inter var';
+          font-weight: 400;
+          font-size: 80%;
+          line-height: 1.5;
+          margin-left: auto;
+          padding-left: 1rem;
+          margin-right: auto;
+          color: #e5e7eb;
+        }
+  
+      }
 }

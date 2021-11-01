@@ -10,14 +10,18 @@ layout: layouts/base.njk
 
         <div class="lg:col-span-8 xl:col-span-9">
 
-        <article class="prose max-w-none dark:prose-dark">
+        <article class="prose max-w-none dark:prose-dark pr-0 md:pr-8 lg:pr-12">
           {{ content | safe }}
         </article>
 
         </div>
 
-        <div class="sticky h-screen top-0 lg:col-span-4 xl:col-span-3">
-            <aside class="prose dark:prose-dark">
+        <div class="sticky h-screen w-full top-0 lg:col-span-4 xl:col-span-3">
+            
+            <aside class="pt-8">
+            <div class="uppercase text-base font-bold font-inter text-fred dark:text-fgreen tracking-wider pb-4">
+            <p> Table of Contents ↓ </p>
+            </div>
             {{ content | toc | safe }}
             </aside>
         </div>
