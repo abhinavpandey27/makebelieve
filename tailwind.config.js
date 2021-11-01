@@ -9,6 +9,10 @@ module.exports = {
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
+      height: {
+        vsm: '.5px'
+
+      },
       animation: ['hover', 'focus'],
       maxWidth: {
         '8xl': '90rem',
@@ -77,6 +81,7 @@ module.exports = {
               code: { color: theme('colors.primary.400') },
             },
             h1: {
+              fontFamily: 'Open Sauce Sans',
               paddingTop:'.2rem',
               fontWeight: '700',
               maxWidth: '600px',
@@ -84,17 +89,20 @@ module.exports = {
               color: theme('colors.gray.900'),
             },
             h2: {
+              fontFamily: 'Open Sauce Sans',
               fontWeight: '700',
               maxWidth: '600px',
               letterSpacing: theme('letterSpacing.tight'),
               color: theme('colors.gray.900'),
             },
             h3: {
+              fontFamily: 'Open Sauce Sans',
               fontWeight: '600',
               maxWidth: '600px',
               color: theme('colors.gray.900'),
             },
             'h4,h5,h6': {
+              fontFamily: 'Open Sauce Sans',
               maxWidth: '600px',
               color: theme('colors.gray.900'),
             },

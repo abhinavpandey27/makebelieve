@@ -1,10 +1,13 @@
 ---
-title: 'Laws of UX'
+title: 'Pocket Redesign'
+subtext: 'Took a stab at solving a problem I faced using a product, through design of course.'
 date: '2020-03-23'
 tags: 'UX'
+coverimage: '/img/spotify-apple-1500x.png'
+location: 'Mumbai, India'
 ---
 
-# Project Overview 👀
+## Project Overview 👀
 
 
 **Context:** Personal Project
@@ -41,7 +44,7 @@ During my intensive usage of the app for research and understanding purposes, I 
 
 <hr>
 
-# Introduction
+## Introduction
 
 Pocket is a **read-it later** software. It allows users to save articles which they find on the internet. Users can later **read the saved articles** inside Pocket’s mobile and web apps which are designed for a rich reading experience.
 
@@ -58,7 +61,7 @@ Austen’s tweet (which is now deleted :/) received around ~126 comments. Everyo
 
 ----
 
-# Research 🧠
+## Research 🧠
 
 **The Consensus:** Pocket does not incentivize users to go back and read the saved articles
 
@@ -91,15 +94,15 @@ Articles like type B are *useful articles.* Reading these articles inside the Po
 
 ----
 
-# Opportunities to Improve
+## Opportunities to Improve
 
 
 
-## Opportunity 1: Incentivize users to read the saved articles
+### Opportunity 1: Incentivize users to read the saved articles
 
 Pocket has **no motivation framework**. There are no statistics to determine how much are you reading. If there are no options for a user to measure their growth, it is easy for users to conclude that Pocket is not helpful for them. Pocket also has **no reminder system**. Reading is something people want to do, however since they are not reminded to do it on daily basis, they forget it easily. Reminder system is something that can be solved well with notifications. Hence, I focussed on the other part of the story - 'no motivation framework'.
 
-## Opportunity 2: Increase the total number of monetizable articles
+### Opportunity 2: Increase the total number of monetizable articles
 
 The articles in Pocket discover tab are “handpicked” by editors. However it easy for editors to have inherent biases (domain, country etc). There is a recommendation feature inside the app that shows recommendations by an individual.
 
@@ -109,9 +112,9 @@ Users will likely **read articles suggested by others**. By creating a feature t
 
 
 
-# Design Process
+## Design Process
 
-## Working on Opportunity 1 - Creating incentives for users to read 📚
+### Working on Opportunity 1 - Creating incentives for users to read 📚
 
 > How might we incentivize users to read the saved articles, maximizing the utility the app provides to users?
 
@@ -119,7 +122,7 @@ I tried to leverage gamification to incentivize users to use the app and read re
 
 Humans don’t mind hardship they thrive on it. Sense of achievement after overcoming hardships is one of the biggest motivators for humans. I have kept these motivations in mind while designing.
 
-## Progress Tab
+### Progress Tab
 
 
 
@@ -146,7 +149,7 @@ An exploration to view monthly and weekly metrics didn’t end up in the final v
 
 
 
-## Working on Opportunity 2 - Building a system that increases total number *monetizable* articles📚
+### Working on Opportunity 2 - Building a system that increases total number *monetizable* articles📚
 
 > How might we urge users to save and share more articles?
 
@@ -167,7 +170,7 @@ For example - I want to become a product manager, I go around on the internet to
 
 Coming back to the initial idea - when we have increased usage and useful data production (people searching and saving articles) why shouldn’t we build features that take advantage of this and builds network effects around it?
 
-## Pocket Folders
+### Pocket Folders
 
 Therefore, an idea built on top of this - Pocket Folders. A feature that will help you club the saved articles, share them through a link, or publish them on a community so that all the other Pocket users can take benefit.
 
@@ -189,7 +192,7 @@ For full quality follow along [this pdf](https://drive.google.com/file/d/1EwpmzA
 
 
 
-# Reflection and Takeaways 🌱
+## Reflection and Takeaways 🌱
 
 Thanks for sticking around for so long. This one of my first projects where I deep-dived into product and UX flows.
 
