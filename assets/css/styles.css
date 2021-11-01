@@ -14,14 +14,14 @@
         font-style:  normal;
         font-weight: 300;
         font-display: swap;
-        src: url("src/fonts/OpenSauceSans-Light.woff") format("woff");
+        src: url("/fonts/OpenSauceSans-Light.woff") format("woff");
       }
       @font-face {
         font-family: 'Open Sauce Sans';
         font-style:  italic;
         font-weight: 300;
         font-display: swap;
-        src: url("src/fonts/OpenSauceSans-LightItalic.woff") format("woff");
+        src: url("/fonts/OpenSauceSans-LightItalic.woff") format("woff");
       }
       
       @font-face {
@@ -29,14 +29,14 @@
         font-style:  normal;
         font-weight: 400;
         font-display: swap;
-        src: url("src/fonts/OpenSauceSans-Regular.woff") format("woff");
+        src: url("/fonts/OpenSauceSans-Regular.woff") format("woff");
       }
       @font-face {
         font-family: 'Open Sauce Sans';
         font-style:  italic;
         font-weight: 400;
         font-display: swap;
-        src: url("src/fonts/OpenSauceSans-Italic.woff") format("woff");
+        src: url("/fonts/OpenSauceSans-Italic.woff") format("woff");
       }
       
       @font-face {
@@ -44,14 +44,14 @@
         font-style:  normal;
         font-weight: 500;
         font-display: swap;
-        src: url("src/fonts/OpenSauceSans-Medium.woff") format("woff");
+        src: url("/fonts/OpenSauceSans-Medium.woff") format("woff");
       }
       @font-face {
         font-family: 'Open Sauce Sans';
         font-style:  italic;
         font-weight: 500;
         font-display: swap;
-        src: url("src/fonts/OpenSauceSans-MediumItalic.woff") format("woff");
+        src: url("/fonts/OpenSauceSans-MediumItalic.woff") format("woff");
       }
       
       @font-face {
@@ -59,14 +59,14 @@
         font-style:  normal;
         font-weight: 600;
         font-display: swap;
-        src: url("src/fonts/OpenSauceSans-SemiBold.woff") format("woff");
+        src: url("/fonts/OpenSauceSans-SemiBold.woff") format("woff");
       }
       @font-face {
         font-family: 'Open Sauce Sans';
         font-style:  italic;
         font-weight: 600;
         font-display: swap;
-        src: url("src/fonts/OpenSauceSans-SemiBoldItalic.woff") format("woff");
+        src: url("/fonts/OpenSauceSans-SemiBoldItalic.woff") format("woff");
       }
       
       @font-face {
@@ -74,14 +74,14 @@
         font-style:  normal;
         font-weight: 700;
         font-display: swap;
-        src: url("src/fonts/OpenSauceSans-Bold.woff") format("woff");
+        src: url("/fonts/OpenSauceSans-Bold.woff") format("woff");
       }
       @font-face {
         font-family: 'Open Sauce Sans';
         font-style:  italic;
         font-weight: 700;
         font-display: swap;
-        src: url("src/fonts/OpenSauceSans-BoldItalic.woff") format("woff");
+        src: url("/fonts/OpenSauceSans-BoldItalic.woff") format("woff");
       }
       
       @font-face {
@@ -89,14 +89,14 @@
         font-style:  normal;
         font-weight: 800;
         font-display: swap;
-        src: url("src/fonts/OpenSauceSans-ExtraBold.woff") format("woff");
+        src: url("/fonts/OpenSauceSans-ExtraBold.woff") format("woff");
       }
       @font-face {
         font-family: 'Open Sauce Sans';
         font-style:  italic;
         font-weight: 800;
         font-display: swap;
-        src: url("src/fonts/OpenSauceSans-ExtraBoldItalic.woff") format("woff");
+        src: url("/fonts/OpenSauceSans-ExtraBoldItalic.woff") format("woff");
       }
       
       @font-face {
@@ -104,14 +104,14 @@
         font-style:  normal;
         font-weight: 900;
         font-display: swap;
-        src: url("src/fonts/OpenSauceSans-Black.woff") format("woff");
+        src: url("/fonts/OpenSauceSans-Black.woff") format("woff");
       }
       @font-face {
         font-family: 'Open Sauce Sans';
         font-style:  italic;
         font-weight: 900;
         font-display: swap;
-        src: url("src/fonts/OpenSauceSans-BlackItalic.woff") format("woff");
+        src: url("/fonts/OpenSauceSans-BlackItalic.woff") format("woff");
       }
 
 
