@@ -16,6 +16,56 @@ module.exports = function(eleventyConfig) {
 
   const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
+
+
+	eleventyConfig.addShortcode('respimg', (path, alt, style) => {
+		const fetchBase = `https://res.cloudinary.com/${eleventyConfig.cloudinaryCloudName}/image/upload/`
+		const src = `${fetchBase}q_auto,f_auto,w_400/${path}.${eleventyConfig.format}`
+		const srcset = eleventyConfig.srcsetWidths
+			.map(({ w, v }) => {
+				return `${fetchBase}dpr_auto,q_auto,w_${w}/makebelieve.pages.dev/${path}.${eleventyConfig.format} ${v}w`
+			})
+			.join(', ')
+
+		return `<img class="${
+			style ? style : ''
+		}" loading="lazy" src="${src}" srcset="${srcset}" alt="${
+			alt ? alt : ''
+		}" width="400" height="300" sizes="100vw">`
+	})
+
+	eleventyConfig.addShortcode('figure', (path, alt, caption) => {
+		const fetchBase = `https://res.cloudinary.com/${eleventyConfig.cloudinaryCloudName}/image/upload/`
+		const src = `${fetchBase}q_auto,f_auto,w_400/https://makebelieve.pages.dev/${path}.${eleventyConfig.format}`
+		const srcset = eleventyConfig.srcsetWidths
+			.map(({ w, v }) => {
+				return `${fetchBase}dpr_auto,q_auto,w_${w}/${path}.${eleventyConfig.format} ${v}w`
+			})
+			.join(', ')
+
+		return `<figure class="mb-10"><img loading="lazy" src="${src}" srcset="${srcset}" alt="${
+			alt ? alt : ''
+		}" width="400" height="300"><figcaption class="text-center text-sm mt-3 text-gray-600 dark:text-gray-200">${
+			caption ? caption : ''
+		}</figcaption></figure>`
+	})
+
+	// https://github.com/eeeps/eleventy-respimg
+	eleventyConfig.cloudinaryCloudName = 'abhinavonec'
+	eleventyConfig.srcsetWidths = [
+		{ w: 400, v: 400 },
+		{ w: 600, v: 600 },
+		{ w: 768, v: 768 },
+		{ w: 820, v: 820 },
+		{ w: 1240, v: 1240 }
+	]
+	eleventyConfig.format = 'webp'
+	eleventyConfig.fallbackWidth = 800
+
+
+
+
   
   /**
    * HTML Minifier for production builds
