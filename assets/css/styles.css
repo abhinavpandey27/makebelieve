@@ -114,6 +114,14 @@
         src: url("/fonts/OpenSauceSans-BlackItalic.woff") format("woff");
       }
 
+      .lazy-img {
+        filter: blur(8px);
+        transition: filter 0.3s ease-in;
+      }
+      .loaded .lazy-img {
+        filter: unset;
+      }
+
 
       .toc>ol{
         font-family: 'Inter var';

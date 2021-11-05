@@ -3,6 +3,9 @@ const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js');
 const markdownIt = require('markdown-it')
 const markdownitlinkatt = require('markdown-it-link-attributes')
 const markdownItAnchor = require('markdown-it-anchor')
+const classNames = require('classnames')
+
+
 
 
 
@@ -19,6 +22,13 @@ module.exports = function(eleventyConfig) {
 
 
 
+ 
+  
+ 
+
+
+
+/*
 	eleventyConfig.addShortcode('respimg', (path, alt, style) => {
 		const fetchBase = `https://res.cloudinary.com/${eleventyConfig.cloudinaryCloudName}/image/upload/`
 		const src = `${fetchBase}q_auto,f_auto,w_400/${path}.${eleventyConfig.format}`
@@ -63,6 +73,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.format = 'webp'
 	eleventyConfig.fallbackWidth = 800
 
+  */
 
 
 
@@ -134,9 +145,97 @@ module.exports = function(eleventyConfig) {
 
 
   return {
+
     dir: {
       input: "src",
       data: "../_data"
     }
   };
 };
+
+
+/* Diwali Day Image Plugin Stuff (put on top of exports if needed)
+const ImageWidths = {
+  ORIGINAL: null,
+  PLACEHOLDER: 24,
+};
+
+const imageShortcode = async (
+  relativeSrc,
+  alt,
+  className,
+  widths = [400, 800, 1280],
+  width = 2000,
+  height = 1500,
+  formats = ['jpeg', 'webp'],
+  baseFormat = 'jpeg',
+  optimizedFormats = ['webp'],
+  sizes = '100vw'
+) => {
+ /* const { dir: imgDir } = path.parse(relativeSrc); * /
+  
+ const { name: imgName, dir: imgDir } = path.parse(relativeSrc);
+ const fullSrc = path.join('src', relativeSrc);
+
+  const imageMetadata = await Image(fullSrc, {
+    widths: [ImageWidths.ORIGINAL, ImageWidths.PLACEHOLDER, ...widths],
+    formats: [...optimizedFormats, baseFormat],
+    outputDir: path.join('_site', imgDir),
+    urlPath: imgDir,
+  filenameFormat: (hash, _src, width, format) => {
+      const suffix = width === ImageWidths.PLACEHOLDER ? 'placeholder' : width;
+      return `${imgName}-${hash}-${suffix}.${format}`; 
+    }, 
+  });
+
+  // Map each unique format (e.g., jpeg, webp) to its smallest and largest images
+const formatSizes = Object.entries(imageMetadata).reduce((formatSizes, [format, images]) => {
+  if (!formatSizes[format]) {
+    const placeholder = images.find((image) => image.width === ImageWidths.PLACEHOLDER);
+    // 11ty sorts the sizes in ascending order under the hood
+    const largestVariant = images[images.length - 1];
+
+    formatSizes[format] = {
+      placeholder,
+      largest: largestVariant,
+    };
+  }
+  return formatSizes;
+}, {});
+
+
+
+ // Chain class names w/ the classNames package; optional
+const picture = `<picture class="${classNames('lazy-picture', className)}">
+${Object.values(imageMetadata)
+  // Map each format to the source HTML markup
+  .map((formatEntries) => {
+    // The first entry is representative of all the others since they each have the same shape
+    const { format: formatName, sourceType } = formatEntries[0];
+
+    const placeholderSrcset = formatSizes[formatName].placeholder.url;
+    const actualSrcset = formatEntries
+      // We don't need the placeholder image in the srcset
+      .filter((image) => image.width !== ImageWidths.PLACEHOLDER)
+      // All non-placeholder images get mapped to their srcset
+      .map((image) => image.srcset)
+      .join(', ');
+
+    return `<source type="${sourceType}" srcset="${placeholderSrcset}" data-srcset="${actualSrcset}" data-sizes="${sizes}">`;
+  })
+  .join('\n')}
+  <img
+    src="${formatSizes[baseFormat].largest.url}"
+    data-src="${formatSizes[baseFormat].largest.url}"
+    width="${width}"
+    height="${height}"
+    alt="${alt}"
+    class="lazy-img"
+    loading="lazy">
+</picture>`;
+
+return picture;
+
+};
+
+*/

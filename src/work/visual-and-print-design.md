@@ -1,15 +1,16 @@
 ---
 templateEngineOverride: njk,md
-metaTitle: 'Work Title 4'
-metaDescription: Work Title 4 Description
-title: 'Work Title 4'
-description: Work Title 4 Description
+metaTitle: 'Visual and Print Design'
+metaDescription: Work Title 5 Description
+title: 'Visual and Print Design'
+description: Work Title 5 Description
 summary: 'A travel journal that transports you to some of the most
 beautiful places on earth.'
-displayOrder: 1
+duration: JUN 2019 - SEP 2019 • LONDON, UK
+displayOrder: 5
 featured: true
 hero:
-  image: '/img/abhinav@0.3x.jpg'
+  image: '/img/abhinav.jpg'
   imageAlt: 'A composition of all the views from the app'
 projectOverview:
   context: 'Personal Project'

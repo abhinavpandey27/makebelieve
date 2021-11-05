@@ -9,8 +9,14 @@ module.exports = {
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
+      boxShadow :{
+        '3xl': '2px 2px 20px 0px rgba(0, 0, 0, 0.1)',
+      },
+      dropShadow: ['hover', 'focus'],
       height: {
-        vsm: '.5px'
+        vsm: '.5px',
+        nvsm: '2px',
+        '128': '32rem',
 
       },
       animation: ['hover', 'focus'],
@@ -21,8 +27,8 @@ module.exports = {
         transparent: 'transparent',
         current: 'currentColor',
         bgblue: {
-          DEFAULT: '#23282D',
-          dark: '#1C1F22',
+          DEFAULT: '#1C1F22',
+          dark: '#121315',
         },
         fred: {
           DEFAULT: '#D41616',

@@ -1,15 +1,16 @@
 ---
 templateEngineOverride: njk,md
-metaTitle: 'Work Title 3'
-metaDescription: Work Title 3 Description
-title: 'Work Title 3'
-description: Work Title 3 Description
+metaTitle: 'MPL'
+metaDescription: Work Title 4 Description
+title: 'MPL'
+description: Took a stab at solving a problem I faced using a product, through design of course.
 summary: 'A travel journal that transports you to some of the most
 beautiful places on earth.'
-displayOrder: 3
+duration: JUN 2019 - SEP 2019 • LONDON, UK
+displayOrder: 1
 featured: true
 hero:
-  image: '/img/abhinav@0.3x.jpg'
+  image: '/img/abhinav.jpg'
   imageAlt: 'A composition of all the views from the app'
 projectOverview:
   context: 'Personal Project'

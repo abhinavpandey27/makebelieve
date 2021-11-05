@@ -3,10 +3,11 @@ title: 'Pocket Redesign'
 subtext: 'Took a stab at solving a problem I faced using a product, through design of course.'
 date: '2020-03-23'
 tags: 'UX'
-coverimage: '/img/spotify-apple-1500x.png'
+coverimage: /img/spotify-apple-1500x.png
 location: 'Mumbai, India'
 metaTitle: 'Pocket Redesign'
 metaDescription: 'Took a stab at solving a problem I faced using a product, through design of course.'
+templateEngineOverride: njk, md
 ---
 
 ## Project Overview 👀
@@ -22,14 +23,13 @@ metaDescription: 'Took a stab at solving a problem I faced using a product, thro
 
 **Tools:** Pen, Paper, and Figma
 
-{% respimg IDEA3, a picture %}
 
-{% figure IDEA3, randomalt %}
+
 One day I was scrolling through Twitter when I stumbled upon a tweet by Austen Allred (CEO of Lambda School) on Pocket.
 
 
 
-![sjcj](/img/abhinav.jpg)
+
 
 <img
           src="/img/abhinav.jpg"
