@@ -3,13 +3,18 @@ layout: layouts/base.njk
 ---
 <div class="w-full max-w-full mx-auto my-auto">
 
-  <div class="max-w-8xl mx-auto h-auto py-4 md:py-4 px-4 lg:px-12 xl:px-12 2xl:px-2">
+  <div class="max-w-8xl mx-auto h-auto py-4 md:py-4 px-4 lg:px-12 xl:px-12 2xl:px-2 
+      md:divide-fred md:divide-y md:divide-dashed md:divide-opacity-80 md:dark:divide-fgreen md:dark:divide-y md:dark:divide-dashed md:dark:divide-opacity-80">
 
 
 
 {% block featuredWork %}
   {% include 'partials/featured-work.njk' %}
 {% endblock featuredWork %}
+
+{% block featuredWork2 %}
+  {% include 'partials/featured-work.njk' %}
+{% endblock featuredWork2 %}
 
 {% block featuredWriting %}
   {% include 'partials/featured-writing.njk' %}

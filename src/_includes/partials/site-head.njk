@@ -1,6 +1,6 @@
 <!-- add navigation and stuff-->
 
-<div class="w-full max-w-full mx-auto my-auto bg-bggray-dark dark:bg-bgblue">
+<div class="w-full max-w-full mx-auto my-auto bg-bggray-dark dark:bg-bgblue shadow-sm">
 
 <div class="max-w-full mx-auto h-1 md:h-1 bg-fred dark:bg-fgreen">
 
@@ -8,7 +8,7 @@
 
 
 
-<div class="max-w-8xl mx-auto h-auto py-4 md:py-12 px-4 lg:px-12 xl:px-12 2xl:px-2">
+<div class="max-w-8xl mx-auto h-auto py-4 md:py-8 px-4 lg:px-12 xl:px-12 2xl:px-2">
 
 <div class="">
 
@@ -27,7 +27,7 @@
     {% set navPages = collections.all | eleventyNavigation %}
     <ul class="flex flex-row space-x-4 md:space-x-8 divide-x-0 divide-gray-100">
     {% for entry in navPages %}
-    <li{% if entry.url == page.url %} class="text-fred dark:text-fgreen hover:bg-red-200 text-sm md:text-base font-OpenSauceSans font-medium tracking-tight"{% else %} class="text-sm md:text-base text-gray-800 dark:text-gray-100 font-OpenSauceSans font-medium tracking-tight"{% endif %}>
+    <li{% if entry.url == page.url %} class="text-fred hover-underline-animation dark:text-fgreen uppercase tracking-wider text-sm md:text-base font-OpenSauceSans font-medium "{% else %} class="text-sm md:text-base uppercase tracking-wider hover-underline-animation text-gray-800 dark:text-gray-100 font-OpenSauceSans font-medium "{% endif %}>
         <a href="{{ entry.url | url }}">{{ entry.title }}</a>
     </li>
     {% endfor %}

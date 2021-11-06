@@ -1,11 +1,11 @@
 
 
 
-<div class="grid grid-cols-12 md:divide-fred md:divide-x md:divide-dashed md:divide-opacity-20 md:dark:divide-fgreen md:dark:divide-x md:dark:divide-dashed md:dark:divide-opacity-20 ">
+<div class="pt-8 pb-8 grid grid-cols-12 md:divide-fred md:divide-x md:divide-dashed md:divide-opacity-20 md:dark:divide-fgreen md:dark:divide-x md:dark:divide-dashed md:dark:divide-opacity-20 ">
 
 
 
-<div class="col-span-12 md:col-span-3 lg:col-span-2 md:pr-8 pb-4 md:pb-0">
+<div class="md:sticky md:h-screen w-full top-0 col-span-12 md:col-span-3 lg:col-span-2 md:pr-8 pb-4 md:pb-0">
 
 <h1 class="text-fred dark:text-fgreen font-OpenSauceSans font-bold tracking-tighter text-2xl md:text-4xl pb-2 md:pb-4 pt-4"> Work  </h1>
 
@@ -20,7 +20,7 @@
   
   {% for item in collections.featuredWork %}
   {% if item.data.displayOrder == 1 %}
-      <div class="group col-span-10 bg-bggray-dark dark:bg-bgblue h-128 transition delay-400 lg:hover:scale-105 lg:hover:shadow-2xl ml-0 mb-8 md:ml-8">
+      <div class="group col-span-10 bg-bggray-dark dark:bg-bgblue h-128 transition delay-400 lg:hover:scale-105 lg:hover:shadow-2xl ml-0 mb-8 md:ml-8 cursor-wait rounded-sm shadow-sm">
         
 
         <a
@@ -54,7 +54,7 @@
 
     <div class="col-span-10 lg:col-span-5 ml-0 md:ml-8 mb-8">
 
-    <div class="bg-bggray-dark dark:bg-bgblue transition delay-400 lg:hover:scale-105 lg:hover:shadow-2xl">
+    <div class="bg-bggray-dark dark:bg-bgblue transition delay-400 lg:hover:scale-105 lg:hover:shadow-2xl shadow-sm">
     
       <a
         href="{{ item.url }}"

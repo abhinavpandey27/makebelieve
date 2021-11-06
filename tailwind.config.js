@@ -9,6 +9,12 @@ module.exports = {
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
+      borderRadius: {
+        'vsm': '1px',
+      },
+      cursor:{
+        'newpage': 'ne-resize'
+      },
       boxShadow :{
         '3xl': '2px 2px 20px 0px rgba(0, 0, 0, 0.1)',
       },
@@ -37,8 +43,8 @@ module.exports = {
           DEFAULT: '#B9F073',
         },
         bggray: {
-          DEFAULT:'#ECECEC',
-          dark: '#E4E4E4'
+          DEFAULT:'#E4E4E4',
+          dark: '#ECECEC'
         },
         gray: {
           darkest: '#1f2d3d',
