@@ -43,8 +43,8 @@ module.exports = {
           DEFAULT: '#B9F073',
         },
         bggray: {
-          DEFAULT:'#E4E4E4',
-          dark: '#ECECEC'
+          DEFAULT:'#F7F7F7',
+          dark: '#FFFFFF'
         },
         gray: {
           darkest: '#1f2d3d',
