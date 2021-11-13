@@ -2,7 +2,7 @@
     
     
     
-<div class="grid grid-cols-12">
+<div class="grid grid-cols-12 pt-8 divide-x divide-gray-200 dark:divide-gray-700">
 
 
     <div class="col-span-12 lg:col-span-9">
@@ -11,11 +11,11 @@
 
             {% for item in postListItems %}
 
-            <div class="col-span-12 lg:col-span-6 xl:col-span-4 lg:pr-8 h-auto lg:h-128">
+            <div class="col-span-12 lg:col-span-6 xl:col-span-4 lg:pr-8 h-auto mb-4 md:mb-0 lg:h-128">
 
                 
 
-                <div class="h-vsm w-full bg-gray-200 dark:bg-gray-600 "></div>
+                <div class="h-vsm w-full bg-gray-200 dark:bg-gray-700 "></div>
             
                 
 
@@ -49,7 +49,7 @@
 
                         {%- if collections.tagList.indexOf(tag) != -1 -%}
                             {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-                            <a href="{{ tagUrl | url }}" class="text-sm font-OpenSauceSans border-b border-blue-500 text-gray-500 hover:text-fred hover:font-italic dark:hover:text-fgreen dark:text-gray-300">{{ tag }}</a>
+                            <a href="{{ tagUrl | url }}" class="text-sm font-OpenSauceSans text-gray-500 hover:text-fred hover:font-italic dark:hover:text-fgreen dark:text-gray-300">{{ tag }}</a>
                             {% if loop.length - loop.index == 1 %} <p class="text-sm  font-OpenSauceSans text-gray-500 dark:text-gray-300">•</p> {% endif %}
                             {%- if loop.length - loop.index > 1 %}   {% endif -%}
                         {%- endif -%}
@@ -63,7 +63,7 @@
 
 
                 <div class="pb-2 ">
-                    <a href="{{ item.url }}" class="pb-2 pt-2 text-lg font-bold tracking-tight leading-4 font-OpenSauceSans text-gray-800 dark:text-gray-100 hover:text-fred dark:hover:text-fgreen md:text-xl">{{ item.data.title }}</a>
+                    <a href="{{ item.url }}" class=" pt-2 text-lg border-b border-b-gray-300 dark:border-b-gray-700  md:hover:border-b md:hover:border-b-fred md:dark:hover:border-b-fgreen font-bold tracking-tight font-OpenSauceSans text-gray-800 dark:text-gray-100 hover:text-fred dark:hover:text-fgreen md:text-xl">{{ item.data.title }}</a>
                 </div>
                 <div class="">
                     <p class="pb-2 pt-2 text-sm  font-OpenSauceSans text-gray-700 dark:text-gray-200">{{ item.data.subtext }}</p>
@@ -77,7 +77,22 @@
 
     </div>
 
-    <div class="col-span-12 lg:col-span-3">
+    <div class="col-span-12 lg:col-span-3 pl-8">
+
+    <div class="text-xl font-bold font-OpenSauceSans text-fred dark:text-fgreen pb-4">
+        <p> Filter by Tag </p>
+    </div>
+
+    <div class="flex flex-col">
+
+    {% for tag in collections.tagList %}
+        <div class="pb-2">
+    {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+    <a href="{{ tagUrl | url }}" class="text-sm font-OpenSauceSans text-gray-500 hover:text-fred hover:font-italic dark:hover:text-fgreen dark:text-gray-300">{{ tag }}</a>
+        </div>
+    {% endfor %}
+
+    </div>
 
 
     </div>

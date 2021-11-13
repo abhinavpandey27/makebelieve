@@ -1,7 +1,7 @@
 ---
 title: 'Pocket Redesign'
 subtext: 'Took a stab at solving a problem I faced using a product, through design of course.'
-date: '2020-03-23'
+date: '2020-12-29'
 tags: 'UX'
 coverimage: /img/spotify-apple-1500x.png
 coverimagetrue: 'true'
