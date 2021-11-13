@@ -1,7 +1,10 @@
 ---
 title: 'Typography tips for the web'
+subtext: 'Took a stab at solving a problem I faced using a product, through design of course.'
 date: '2019-12-04'
 tags: ['Tips And Tricks']
+coverimage: /img/spotify-apple-1500x.png
+coverimagealt: test alt
 ---
 Lorem markdownum pectus neque! Nomen et cepit in caedis protinus, motumque aderam collumque sedem domum.
 

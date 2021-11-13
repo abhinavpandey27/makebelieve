@@ -1,7 +1,10 @@
 ---
 title: 'Color Palette Generator'
+subtext: 'Took a stab at solving a problem I faced using a product, through design of course.'
 date: '2019-11-16'
 tags: ['Tools']
+coverimage: /img/spotify-apple-1500x.png
+coverimagealt: test alt
 ---
 
 Lorem markdownum ait. Plaustrum gaudet: similis pulsarunt inmortalis multa cui et huic altera nil; non ingenio tormenta visa.

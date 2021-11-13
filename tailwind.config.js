@@ -33,8 +33,8 @@ module.exports = {
         transparent: 'transparent',
         current: 'currentColor',
         bgblue: {
-          DEFAULT: '#1C1F22',
-          dark: '#121315',
+          DEFAULT: '#252B30',
+          dark: '#1C1F22',
         },
         fred: {
           DEFAULT: '#D41616',
@@ -57,13 +57,13 @@ module.exports = {
       fontFamily: {
         karla: ["'Karla'", ...defaultTheme.fontFamily.sans],
         inter: ["'Inter var'", ...defaultTheme.fontFamily.sans],
-        OpenSauceSans: ["'Open Sauce Sans'", ...defaultTheme.fontFamily.sans],
+        OpenSauceSans: ["'Open Sauce Sans'", ...defaultTheme.fontFamily.serif],
       },
       typography: (theme) => ({
         DEFAULT: {
           css: {
             color: theme('colors.gray.800'),
-            fontFamily: 'inter',
+            fontFamily: 'Inter var',
             p:{
               maxWidth: '65ch',
               fontSize: '1.1rem',

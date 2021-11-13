@@ -1,7 +1,10 @@
 ---
 title: 'Making design tokens a single source of truth'
+subtext: 'Took a stab at solving a problem I faced using a product, through design of course.'
 date: '2019-12-21'
 tags: 'Design Systems'
+coverimage: /img/spotify-apple-1500x.png
+coverimagealt: test alt
 ---
 Lorem markdownum, bracchia iuvenis teneo, nec urget, iuvenum nec adusque. Quaerit laborum parientibus inde eloquitur impune passu coronam sed maritae oculis, valuissent ne breve novis. Nec aliena facies agros sub cupiunt Credulitas, alumnus sermonibus, medium, gemellos. Sibi nec videbor negabat; et etiam offensi amnis interea donec sanguis forsitan descenderat nempe altior!
 

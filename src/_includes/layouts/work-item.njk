@@ -2,5 +2,50 @@
 layout: layouts/base.njk
 ---
 
-<h1> {{title}} </h1>
 
+
+
+<section class="min-w-full scroll-snap-y">
+
+    <div class="flex flex-row h-screen scroll-snap-align-start">
+
+        <div class="w-2/6 h-full p-16 bg-bggray dark:bg-bgblue">
+
+            <h1 class="text-6xl font-bold font-OpenSauceSans tracking-tighter text-fred dark:text-fgreen"> {{slide1.title}} </h1>
+
+            <div class="pt-12 flex flex-col space-y-4">
+            <p class="text-lg font-inter text-gray-700 dark:text-gray-200"> {{slide1.text1}} </p>
+
+            <p class="text-lg font-inter text-gray-700 dark:text-gray-200"> {{slide1.text2}} </p>
+            </div>
+
+        </div>
+
+        <div class="w-4/6 p-8 h-full flex justify-center items-center overflow-hidden bg-bggray-dark dark:bg-bgblue-dark">
+
+            
+              <img
+                src="{{ slide1.image }}"
+                alt=""
+                loading="lazy"
+                class="flex-shrink-0 min-w-full min-h-full"
+              />
+            
+
+        </div>
+
+    </div>
+
+    <div class="flex flex-row h-screen scroll-snap-align-start">
+
+        <div class="w-2/5 h-full bg-yellow-800">
+
+        </div>
+
+        <div class="w-3/5 h-full bg-yellow-200">
+
+        </div>
+
+    </div>
+
+</section>

@@ -1,7 +1,10 @@
 ---
 title: 'Why cross-cultural design really matters'
+subtext: 'Took a stab at solving a problem I faced using a product, through design of course.'
 date: '2019-12-04'
 tags: ['Culture', 'Design Thinking']
+coverimage: /img/spotify-apple-1500x.png
+coverimagealt: test alt
 ---
 
 Lorem markdownum teneri dives, vota inarsit, numina qui mixto. Oculos quo vestro fero inrequieta magni. Ad inania pedes et volucrem, sub ex facti, nec huc curvamina! Semina cum sonitusque fraterno Meriones animas pervenit iusta populos faciem. Colebat et saepe!

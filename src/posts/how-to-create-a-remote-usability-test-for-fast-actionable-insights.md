@@ -1,7 +1,10 @@
 ---
 title: 'How to create a remote usability test for fast, actionable insights'
+subtext: 'Took a stab at solving a problem I faced using a product, through design of course.'
 date: '2020-02-03'
 tags: ['UX', 'Testing']
+coverimage: /img/spotify-apple-1500x.png
+coverimagealt: test alt
 ---
 Lorem markdownum tecta: sub candore removete cessit summum [laetitiae](#adigitque-qua)? Per et est micantia nisi fato? Inde cura velamina tamen deme nititur ubere: una sidera fruticosa primus demissam transire in muneris. Inter est repugnat [dempta](#medio-sine-quamvis), sinu, quisque.
 

@@ -2,6 +2,9 @@
 layout: layouts/base.njk
 ---
 
+
+    {% include "partials/site-head.njk" %}
+    
 <div class="w-full max-w-full mx-auto my-auto">
 
   <div class="max-w-8xl mx-auto h-auto py-4 md:py-4 px-4 lg:px-12 xl:px-12 2xl:px-2">
@@ -37,7 +40,7 @@ layout: layouts/base.njk
 
 
 
-{% if coverimage %}
+{% if coverimagetrue %}
 
       <img
           src="{{ coverimage }}"
@@ -53,18 +56,35 @@ layout: layouts/base.njk
 
 {% endif %}
 
-
-
     <div class="grid grid-cols-1 lg:grid-cols-12 pt-8">
 
-        <div class="lg:col-span-8 xl:col-span-9">
+      {% if tocenabled %}
+
+      <div class="lg:col-span-8 xl:col-span-9">
 
         <article class="prose max-w-none dark:prose-dark pr-0 md:pr-8 lg:pr-12">
           {{ content | safe }}
         </article>
 
-        </div>
+      </div>
+        {% else %}
 
+
+
+      <div class="lg:col-span-12 xl:col-span-12">
+
+        <article class="prose max-w-none dark:prose-dark pr-0 md:pr-8 lg:pr-12">
+          {{ content | safe }}
+        </article>
+
+      </div>
+
+      {% endif %}
+
+
+
+
+        {% if tocenabled %}
         <div class="sticky h-screen w-full top-0 lg:col-span-4 xl:col-span-3">
             
             <aside class="pt-8">
@@ -74,6 +94,8 @@ layout: layouts/base.njk
             {{ content | toc | safe }}
             </aside>
         </div>
+        {% endif %}
+
 
 
     </div>

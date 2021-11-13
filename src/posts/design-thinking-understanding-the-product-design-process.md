@@ -1,7 +1,10 @@
 ---
 title: 'Design Thinking & Understanding the Product Design Process'
+subtext: 'Took a stab at solving a problem I faced using a product, through design of course.'
 date: '2020-02-22'
 tags: 'Design Thinking'
+coverimage: /img/spotify-apple-1500x.png
+coverimagealt: test alt
 ---
 
 Lorem markdownum purpura dolorem! Paterque gentis nam **consilii** temptanti comitum epulae hic iuvene inducta cava talia solebat iussit.

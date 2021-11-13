@@ -4,10 +4,13 @@ subtext: 'Took a stab at solving a problem I faced using a product, through desi
 date: '2020-03-23'
 tags: 'UX'
 coverimage: /img/spotify-apple-1500x.png
+coverimagetrue: 'true'
+coverimagealt: test alt
 location: 'Mumbai, India'
 metaTitle: 'Pocket Redesign'
 metaDescription: 'Took a stab at solving a problem I faced using a product, through design of course.'
 templateEngineOverride: njk, md
+tocenabled: 'true'
 ---
 
 ## Project Overview 👀

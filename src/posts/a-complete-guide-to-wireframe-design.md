@@ -1,7 +1,10 @@
 ---
 title: 'A Complete Guide to Wireframe Design'
+subtext: 'Took a stab at solving a problem I faced using a product, through design of course.'
 date: '2020-04-13'
 tags: ['Tutorial', 'Learning']
+coverimage: /img/spotify-apple-1500x.png
+coverimagealt: test alt
 ---
 
 The past two years were a wild chase for answers. I read books, looked at art, listened to my heroes, and sketched out scratchy thoughts of my own to search for any sensible response to a question that had been lodged in my head for months: What does it mean to natively design for screens?

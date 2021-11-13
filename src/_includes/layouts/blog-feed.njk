@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+---
+
+
+{% set postListItems = pagination.items %}
+
+{% include "partials/site-head.njk" %}
+
+  <div class="w-full max-w-full mx-auto my-auto">
+
+    <div class="max-w-8xl mx-auto h-auto py-4 md:py-4 px-4 lg:px-12 xl:px-12 2xl:px-2">
+
+  {% block content %}
+  <article>
+    {% include "partials/post-list.njk" %}
+  </article>
+  {% endblock %}
+
+
+    </div>
+
+  </div>

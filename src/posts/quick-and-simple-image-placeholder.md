@@ -1,7 +1,10 @@
 ---
 title: 'Quick and simple image placeholder'
+subtext: 'Took a stab at solving a problem I faced using a product, through design of course.'
 date: '2019-09-28'
 tags: ['Tips And Tricks']
+coverimage: /img/spotify-apple-1500x.png
+coverimagealt: test alt
 ---
 
 *Lorem markdownum* clamor, ver gemitus numen se dura mortalia inquit, sine telum durata licet teretes delphina, ex! Et genus. Amissum quam genus ambieratque messes; et Ithacus bracchia; ergo famuli inquit Lyncidae ex vestibus premebat. Rogis crimine nunc hae falsaque, dignus.
