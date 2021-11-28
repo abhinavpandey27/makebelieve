@@ -9,6 +9,7 @@ module.exports = {
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
+      display: ['hover', 'focus'],
       borderRadius: {
         'vsm': '1px',
       },

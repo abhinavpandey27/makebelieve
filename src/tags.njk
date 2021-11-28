@@ -11,9 +11,22 @@ pagination:
   addAllPagesToCollections: true
 permalink: /tags/{{ tag | slug }}/
 ---
-<h1>Tagged “{{ tag }}”</h1>
+
+
+{% include "partials/site-head.njk" %}
+
+  <div class="w-full max-w-full mx-auto my-auto">
+
+    <div class="max-w-8xl mx-auto h-auto py-4 md:py-4 px-4 lg:px-12 xl:px-12 2xl:px-2">
+
+<h1 class="pt-8 text-xl font-bold font-OpenSauceSans text-fred dark:text-fgreen pb-4"><span class="text-gray-800 dark:text-gray-100">Tagged </span>
+"{{ tag }}”</h1>
 
 {% set postListItems = collections[ tag ] %}
 {% include "partials/post-list.njk" %}
 
 <p>See <a href="{{ '/tags/' | url }}">all tags</a>.</p>
+
+    </div>
+
+  </div>

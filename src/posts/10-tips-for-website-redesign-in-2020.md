@@ -1,8 +1,10 @@
 ---
-title: '10 Tips for Website Redesign in 2020'
-subtext: 'Took a stab at solving a problem I faced using a product, through design of course.'
-date: '2020-01-02'
-tags: ['Tips And Tricks']
+title: 10 Tips for Website Redesign in 2020
+subtext: 'Took a stab at solving a problem I faced using a product, through design of course'
+date: '2020-01-29T18:30:00.000Z'
+tags:
+    - Tips And Tricks
+    - Design Testing
 coverimage: /img/spotify-apple-1500x.png
 coverimagetrue: 'true'
 coverimagealt: test alt
@@ -19,7 +21,11 @@ Lorem markdownum **verbis**, fertur *fas* poplite cervix proximus ventis et. Reg
 
 Cognoscite gerens causam circumstant *luctus cupioque* morte, fera coniunx frustra Cnosiacaeque, cupidisque tempus Achaia. Pericla multis blanda! Et terribili, nec, **trepidans** pro; toto nam urbesque.
 
+Testing the content.
+
 Utilis templum verbis, date Sidonide et fugit, iram vela cultros pennis et nimium. Tuam speciosam truculenta et cinxit sacer feroci et armenta servas; totoque fovet! Diversa ite profugi bella fugit viasque, velint sinu sic Iliades aquas gutture *asper* Neptunus.
+
+
 
 ## Tu viginti non
 

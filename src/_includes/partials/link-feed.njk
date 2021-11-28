@@ -1,0 +1,70 @@
+
+<div class="grid grid-cols-12">
+
+    <div class="grid grid-cols-8 col-span-8">
+
+
+
+
+        {% for item in linkListItems %}
+            
+        
+
+        <div class="col-span-2">
+            <p class="text-sm font-OpenSauceSans  text-gray-500 dark:text-gray-300"> {{ item.date }} </p>
+
+            {% for tag in item.tags %}
+
+            
+                {% set tagUrl %}/links/{{ tag | slug }}/{% endset %}
+                <a href="{{ tagUrl | url }}" class="text-sm font-OpenSauceSans text-gray-500 hover:text-fred hover:font-italic dark:hover:text-fgreen dark:text-gray-300">{{ tag }}</a>
+
+            {% endfor %}
+           
+        </div>
+
+        <div class="col-span-6">
+            <a href="{{ item.data.link }}" target="_blank" class="text-xl font-OpenSauceSans font-bold tracking-tight text-gray-500 hover:text-fred hover:font-italic dark:hover:text-fgreen dark:text-gray-300"> Hunger Makes Me </a>
+
+            <p class="pb-2 pt-2 text-base text-gray-700 dark:text-gray-200"> {{ item.data.summary}} </p>
+
+            <div class="pb-2 pt-2 flex flex-row">
+                <div class="w-1 mr-4 h-auto bg-fred dark:bg-fgreen"> </div>
+                <div class="w-full h-auto">
+                    <p class="text-base text-gray-700 dark:text-gray-200"> {% block content %} {{ item.data.content | safe }} {% endblock %} </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+    
+    <div class="col-span-4 pl-16">
+
+
+        <div class="text-xl font-bold font-OpenSauceSans text-fred dark:text-fgreen pb-4">
+            <p> Filter by Tag </p>
+        </div>
+
+        <div class="flex flex-col">
+
+        {% for tag in collections.tagList %}
+            <div class="pb-2">
+        {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+        <a href="{{ tagUrl | url }}" class="text-sm font-OpenSauceSans  md:hover:border-b hover:border-opacity-40 md:hover:border-b-fred md:dark:hover:border-b-fgreen text-gray-500 hover:text-fred hover:font-italic dark:hover:text-fgreen dark:text-gray-300">{{ tag }}</a>
+            </div>
+        {% endfor %}
+
+        </div>
+
+
+    </div>
+
+    </div>
+
+
+
+</div>

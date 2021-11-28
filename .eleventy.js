@@ -108,6 +108,8 @@ module.exports = function(eleventyConfig) {
 		html: true,
 		breaks: true
 	})
+
+  
   /* Markdown Overrides 
 		.use(markdownitlinkatt, {
 			pattern: /^(?!(https:\/\/kailoon\.com|#)).*$/gm,
@@ -129,6 +131,9 @@ module.exports = function(eleventyConfig) {
 				title: 'Anchor link for easy sharing.'
 			}) */
 		})
+
+
+    
 	eleventyConfig.setLibrary('md', markdownLibrary)
 
     // Returns work items, sorted by display order
@@ -148,11 +153,20 @@ module.exports = function(eleventyConfig) {
     return [...collection.getFilteredByGlob('./src/posts/*.md')].reverse();
     });
 
+
+    // Returns a collection of blog posts in reverse date order
+    eleventyConfig.addCollection('links', collection => {
+    return [...collection.getFilteredByGlob('./src/links/**/**/*.md')].reverse();
+    });
+
+
     function filterTagList(tags) {
       return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
     }
   
     eleventyConfig.addFilter("filterTagList", filterTagList)
+
+     const markdownItFootnote = require('markdown-it-footnote');
   
     // Create an array of all tags
     eleventyConfig.addCollection("tagList", function(collection) {

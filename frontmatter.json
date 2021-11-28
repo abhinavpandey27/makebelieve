@@ -1,0 +1,13 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.framework.id": "other",
+  "frontMatter.content.publicFolder": "",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "posts",
+      "path": "[[workspace]]/src/posts"
+    }
+  ],
+  "frontMatter.content.fmHighlight": true,
+  "frontMatter.preview.host": "http://localhost:8080/blog"
+}
