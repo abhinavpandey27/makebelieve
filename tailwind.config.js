@@ -1,6 +1,6 @@
 const { normalizeReference } = require('markdown-it/lib/common/utils')
 const colors = require('tailwindcss/colors')
-const { width } = require('tailwindcss/defaultTheme')
+const { width, fontWeight, letterSpacing } = require('tailwindcss/defaultTheme')
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
@@ -68,7 +68,9 @@ module.exports = {
             p:{
               maxWidth: '65ch',
               fontSize: '1.1rem',
-              lineHeight: '1.68'
+              lineHeight: '1.62',
+              fontWeight: '425',
+              letterSpacing: '-0.014em'
             },
             ul:{
               maxWidth: '65ch',

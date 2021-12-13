@@ -4,6 +4,9 @@ const markdownIt = require('markdown-it')
 const markdownitlinkatt = require('markdown-it-link-attributes')
 const markdownItAnchor = require('markdown-it-anchor')
 const classNames = require('classnames')
+const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
+
+
 
 
 
@@ -20,7 +23,7 @@ module.exports = function(eleventyConfig) {
   const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
-
+  eleventyConfig.addPlugin(UpgradeHelper);
 
  
   
