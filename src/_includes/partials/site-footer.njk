@@ -1,4 +1,100 @@
 <!-- add site footer-->
-<div>
-<p>Site Footer Test</p>
-</div>
+
+
+<div class="w-full mt-40 max-w-full mx-auto my-auto bg-bggray-dark dark:bg-bgblue shadow-sm">
+
+    <div class="max-w-8xl mx-auto h-auto py-4 md:py-8 px-4 lg:px-12 xl:px-12 2xl:px-2">
+
+        <div class="">
+
+            <footer class="grid grid-cols-12 max-w-8xl mx-auto lg:divide-x">
+
+                <div class="col-span-12 md:col-span-6 lg:col-span-3 my-4 md:mx-8" >
+
+                <a href='/'
+                class="text-lg md:text-2xl font-OpenSauceSans text-gray-800 dark:text-gray-100 tracking-tight font-bold">
+                Abhinav Pandey
+                </a>
+
+                {% set navPages = collections.all | eleventyNavigation %}
+                <ul class="flex flex-col space-y-2 mt-8 md:space-y-4">
+                {% for entry in navPages %}
+                <li{% if entry.url == page.url %} class="text-fred hover-underline-animation dark:text-fgreen pfooter "{% else %} class="pfooter hover-underline-animation "{% endif %}>
+                    <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+                </li>
+                {% endfor %}
+                </ul>
+
+                </div>
+
+
+                <div class="col-span-12 md:col-span-6 lg:col-span-3 my-4 md:mx-8 pl-16">
+
+                <a href='/'
+                class="text-lg md:text-2xl font-OpenSauceSans text-gray-800 dark:text-gray-100 tracking-tight font-bold">
+                Abhinav Pandey
+                </a>
+
+                {% set navPages = collections.all | eleventyNavigation %}
+                <ul class="flex flex-col space-y-2 mt-8 md:space-y-4">
+                {% for entry in navPages %}
+                <li{% if entry.url == page.url %} class="text-fred hover-underline-animation dark:text-fgreen pfooter "{% else %} class="pfooter hover-underline-animation "{% endif %}>
+                    <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+                </li>
+                {% endfor %}
+                </ul>
+
+                </div>
+
+                <div class="col-span-12 md:col-span-6 lg:col-span-3 my-4 md:mx-8 pl-16">
+
+                <a href='/'
+                class="text-lg md:text-2xl font-OpenSauceSans text-gray-800 dark:text-gray-100 tracking-tight font-bold">
+                Abhinav Pandey
+                </a>
+
+                {% set navPages = collections.all | eleventyNavigation %}
+                <ul class="flex flex-col space-y-2 mt-8 md:space-y-4">
+                {% for entry in navPages %}
+                <li{% if entry.url == page.url %} class="text-fred hover-underline-animation dark:text-fgreen pfooter "{% else %} class="pfooter hover-underline-animation "{% endif %}>
+                    <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+                </li>
+                {% endfor %}
+                </ul>
+
+                </div>
+
+
+                <div class="col-span-12 md:col-span-6 lg:col-span-3 my-4 md:mx-8 pl-16">
+
+                <a href='/'
+                class="text-lg md:text-2xl font-OpenSauceSans text-gray-800 dark:text-gray-100 tracking-tight font-bold">
+                Abhinav Pandey
+                </a>
+
+                {% set navPages = collections.all | eleventyNavigation %}
+                <ul class="flex flex-col space-y-2 mt-8 md:space-y-4">
+                {% for entry in navPages %}
+                <li{% if entry.url == page.url %} class="text-fred hover-underline-animation dark:text-fgreen pfooter "{% else %} class="pfooter hover-underline-animation "{% endif %}>
+                    <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+                </li>
+                {% endfor %}
+                </ul>
+
+                </div>                
+
+
+            </footer>
+
+
+        </div>
+
+    </div>    
+
+    <div class="max-w-full mx-auto h-1 md:h-1 bg-fred dark:bg-fgreen"></div>
+
+</div>   
+
+
+
+

@@ -70,7 +70,7 @@ module.exports = {
               fontSize: '1.1rem',
               lineHeight: '1.62',
               fontWeight: '425',
-              letterSpacing: '-0.014em'
+              letterSpacing: '-0.010em'
             },
             ul:{
               maxWidth: '65ch',
@@ -155,6 +155,13 @@ module.exports = {
         dark: {
           css: {
             color: theme('colors.gray.200'),
+            p:{
+              maxWidth: '65ch',
+              fontSize: '1.1rem',
+              lineHeight: '1.62',
+              fontWeight: '400',
+              letterSpacing: '-0.016em'
+            },
             a: {
               color: '#B9F073',
               '&:hover': {

@@ -169,6 +169,29 @@
         }
       }
 
+
+
+
+      @media (prefers-color-scheme: dark) {
+        .pfooter {
+          font-family: 'Inter var';
+          color: #e5e7eb;
+          font-weight: 400;
+          font-size: 1.1rem;
+          line-height: 1.5;
+          letterSpacing: -0.032em;
+        }
+      }
+
+      .pfooter {
+        font-family: 'Inter var';
+        color: #1f2937;
+        font-weight: 400;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        letterSpacing: -0.032em;
+      }
+
       .toc li{
         font-family: 'Inter var';
         font-weight: 700;
