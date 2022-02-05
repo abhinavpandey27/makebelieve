@@ -5,7 +5,42 @@ const markdownitlinkatt = require('markdown-it-link-attributes')
 const markdownItAnchor = require('markdown-it-anchor')
 const classNames = require('classnames')
 const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
+const Image = require("@11ty/eleventy-img");
 
+const widths = [600, 1280];
+const formats = ["webp", "jpeg"];
+const sizes = "100vw";
+
+
+
+
+async function imageShortcode(src, alt, sizes = "100vw") {
+  if(alt === undefined) {
+    // You bet we throw an error on missing alt (alt="" works okay)
+    throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
+  }
+
+  let metadata = await Image(src, {
+    widths: [300, 600],
+    formats: ['webp', 'jpeg']
+  });
+
+  let lowsrc = metadata.jpeg[0];
+  let highsrc = metadata.jpeg[metadata.jpeg.length - 1];
+
+  return `<picture>
+    ${Object.values(metadata).map(imageFormat => {
+      return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" sizes="${sizes}">`;
+    }).join("\n")}
+      <img
+        src="${lowsrc.url}"
+        width="${highsrc.width}"
+        height="${highsrc.height}"
+        alt="${alt}"
+        loading="lazy"
+        decoding="async">
+    </picture>`;
+}
 
 
 
@@ -25,9 +60,42 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(UpgradeHelper);
 
- 
+
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+  eleventyConfig.addLiquidShortcode("image", imageShortcode);
+  eleventyConfig.addJavaScriptFunction("image", imageShortcode);
+
+/*
+  const imageShortcode = async (src, alt) => {
+    if (alt === undefined)
+      throw new Error(`Missing "alt" on responsive image from: ${src}`);
+    const srcPath = path.join(
+      "src/img", // image asset source directory
+      src
+    );
+    const imgDir = path.parse(src).dir;
+    const metadata = await Image(srcPath, {
+      widths,
+      formats,
+      outputDir: path.join(
+        "_site/img", // output directory (relative to the project root)
+        imgDir
+      ),
+      urlPath:
+        "/img" + // output directory (relative to the site HTML files)
+        imgDir,
+    });
+    return Image.generateHTML(metadata, {
+      alt,
+      sizes,
+      loading: "lazy",
+      decoding: "async",
+      
+    });
+  };
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
   
- 
+ */
 
 
 

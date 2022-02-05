@@ -58,6 +58,7 @@ module.exports = {
       fontFamily: {
         karla: ["'Karla'", ...defaultTheme.fontFamily.sans],
         inter: ["'Inter var'", ...defaultTheme.fontFamily.sans],
+        Piazzolla: ["'Piazzolla'", ...defaultTheme.fontFamily.serif],
         OpenSauceSans: ["'Open Sauce Sans'", ...defaultTheme.fontFamily.serif],
       },
       typography: (theme) => ({

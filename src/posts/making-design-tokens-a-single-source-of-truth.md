@@ -13,6 +13,8 @@ Lorem markdownum, bracchia iuvenis teneo, nec urget, iuvenum nec adusque. Quaeri
 3. Super poscis
 4. Ne velamina suos iuventus
 
+{% image "src/img/frame-17.png", "photo of my cat" %}
+
 ## Et murmur summa Titan esto ut opprimere
 
 Referens timeas fides, haut sic vultusque, culpa latitantem in eadem, ossa dubitat. *Atracides et imber* vires dies placuere indignatus ardetque exire. His summa flexerat perit! Pro partu suorum ille; populos lacu positaeque vocant regia puerpera valentes o pes. Cereris rerum cornua pavet Alemoniden vitae pereunt laetum.
