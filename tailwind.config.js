@@ -28,7 +28,7 @@ module.exports = {
       },
       animation: ['hover', 'focus'],
       maxWidth: {
-        '8xl': '90rem',
+        '8xl': '1380px',
        },
        colors: {
         transparent: 'transparent',
@@ -58,6 +58,7 @@ module.exports = {
       fontFamily: {
         karla: ["'Karla'", ...defaultTheme.fontFamily.sans],
         inter: ["'Inter var'", ...defaultTheme.fontFamily.sans],
+        interdisplay: ["'InterDisplay'", ...defaultTheme.fontFamily.sans],
         Piazzolla: ["'Piazzolla'", ...defaultTheme.fontFamily.serif],
         OpenSauceSans: ["'Open Sauce Sans'", ...defaultTheme.fontFamily.serif],
       },
@@ -161,7 +162,7 @@ module.exports = {
               fontSize: '1.1rem',
               lineHeight: '1.62',
               fontWeight: '400',
-              letterSpacing: '-0.016em'
+              letterSpacing: '-0.008em'
             },
             a: {
               color: '#B9F073',

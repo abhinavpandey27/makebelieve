@@ -13,7 +13,7 @@ Lorem markdownum, bracchia iuvenis teneo, nec urget, iuvenum nec adusque. Quaeri
 3. Super poscis
 4. Ne velamina suos iuventus
 
-{% image "src/img/frame-17.png", "photo of my cat" %}
+
 
 ## Et murmur summa Titan esto ut opprimere
 

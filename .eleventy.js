@@ -5,43 +5,17 @@ const markdownitlinkatt = require('markdown-it-link-attributes')
 const markdownItAnchor = require('markdown-it-anchor')
 const classNames = require('classnames')
 const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
-const Image = require("@11ty/eleventy-img");
 
+
+
+
+
+
+
+const Image = require("@11ty/eleventy-img");
 const widths = [600, 1280];
 const formats = ["webp", "jpeg"];
 const sizes = "100vw";
-
-
-
-
-async function imageShortcode(src, alt, sizes = "100vw") {
-  if(alt === undefined) {
-    // You bet we throw an error on missing alt (alt="" works okay)
-    throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
-  }
-
-  let metadata = await Image(src, {
-    widths: [300, 600],
-    formats: ['webp', 'jpeg']
-  });
-
-  let lowsrc = metadata.jpeg[0];
-  let highsrc = metadata.jpeg[metadata.jpeg.length - 1];
-
-  return `<picture>
-    ${Object.values(metadata).map(imageFormat => {
-      return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" sizes="${sizes}">`;
-    }).join("\n")}
-      <img
-        src="${lowsrc.url}"
-        width="${highsrc.width}"
-        height="${highsrc.height}"
-        alt="${alt}"
-        loading="lazy"
-        decoding="async">
-    </picture>`;
-}
-
 
 
 
@@ -61,9 +35,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(UpgradeHelper);
 
 
-  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
-  eleventyConfig.addLiquidShortcode("image", imageShortcode);
-  eleventyConfig.addJavaScriptFunction("image", imageShortcode);
+
 
 /*
   const imageShortcode = async (src, alt) => {
@@ -97,7 +69,38 @@ module.exports = function(eleventyConfig) {
   
  */
 
+  const imageShortcode = async (src, alt) => {
+    if (alt === undefined)
+      throw new Error(`Missing "alt" on responsive image from: ${src}`);
+    const srcPath = path.join(
+      "src/images", // image asset source directory
+      src
+    );
+    const imgDir = path.parse(src).dir;
+    const metadata = await Image(srcPath, {
+      widths,
+      formats,
+      outputDir: path.join(
+        "_site/images", // output directory (relative to the project root)
+        imgDir
+      ),
+      urlPath:
+        "/images" + // output directory (relative to the site HTML files)
+        imgDir,
+    });
+    return Image.generateHTML(metadata, {
+      alt,
+      sizes,
+      loading: "lazy",
+      decoding: "async",
+    });
+  };
 
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+  eleventyConfig.addLiquidShortcode("image", imageShortcode);
+  eleventyConfig.addJavaScriptFunction("image", imageShortcode);
+
+  
 
 /*
 	eleventyConfig.addShortcode('respimg', (path, alt, style) => {
@@ -270,88 +273,3 @@ module.exports = function(eleventyConfig) {
 };
 
 
-/* Diwali Day Image Plugin Stuff (put on top of exports if needed)
-const ImageWidths = {
-  ORIGINAL: null,
-  PLACEHOLDER: 24,
-};
-
-const imageShortcode = async (
-  relativeSrc,
-  alt,
-  className,
-  widths = [400, 800, 1280],
-  width = 2000,
-  height = 1500,
-  formats = ['jpeg', 'webp'],
-  baseFormat = 'jpeg',
-  optimizedFormats = ['webp'],
-  sizes = '100vw'
-) => {
- /* const { dir: imgDir } = path.parse(relativeSrc); * /
-  
- const { name: imgName, dir: imgDir } = path.parse(relativeSrc);
- const fullSrc = path.join('src', relativeSrc);
-
-  const imageMetadata = await Image(fullSrc, {
-    widths: [ImageWidths.ORIGINAL, ImageWidths.PLACEHOLDER, ...widths],
-    formats: [...optimizedFormats, baseFormat],
-    outputDir: path.join('_site', imgDir),
-    urlPath: imgDir,
-  filenameFormat: (hash, _src, width, format) => {
-      const suffix = width === ImageWidths.PLACEHOLDER ? 'placeholder' : width;
-      return `${imgName}-${hash}-${suffix}.${format}`; 
-    }, 
-  });
-
-  // Map each unique format (e.g., jpeg, webp) to its smallest and largest images
-const formatSizes = Object.entries(imageMetadata).reduce((formatSizes, [format, images]) => {
-  if (!formatSizes[format]) {
-    const placeholder = images.find((image) => image.width === ImageWidths.PLACEHOLDER);
-    // 11ty sorts the sizes in ascending order under the hood
-    const largestVariant = images[images.length - 1];
-
-    formatSizes[format] = {
-      placeholder,
-      largest: largestVariant,
-    };
-  }
-  return formatSizes;
-}, {});
-
-
-
- // Chain class names w/ the classNames package; optional
-const picture = `<picture class="${classNames('lazy-picture', className)}">
-${Object.values(imageMetadata)
-  // Map each format to the source HTML markup
-  .map((formatEntries) => {
-    // The first entry is representative of all the others since they each have the same shape
-    const { format: formatName, sourceType } = formatEntries[0];
-
-    const placeholderSrcset = formatSizes[formatName].placeholder.url;
-    const actualSrcset = formatEntries
-      // We don't need the placeholder image in the srcset
-      .filter((image) => image.width !== ImageWidths.PLACEHOLDER)
-      // All non-placeholder images get mapped to their srcset
-      .map((image) => image.srcset)
-      .join(', ');
-
-    return `<source type="${sourceType}" srcset="${placeholderSrcset}" data-srcset="${actualSrcset}" data-sizes="${sizes}">`;
-  })
-  .join('\n')}
-  <img
-    src="${formatSizes[baseFormat].largest.url}"
-    data-src="${formatSizes[baseFormat].largest.url}"
-    width="${width}"
-    height="${height}"
-    alt="${alt}"
-    class="lazy-img"
-    loading="lazy">
-</picture>`;
-
-return picture;
-
-};
-
-*/

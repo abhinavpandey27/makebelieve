@@ -10,7 +10,7 @@ duration: JUN 2019 - SEP 2019 • LONDON, UK
 displayOrder: 1
 featured: true
 hero:
-  image: '/img/abhinav.jpg'
+  image: '/images/abhinav.jpg'
   imageAlt: 'A composition of all the views from the app'
 projectOverview:
   context: 'Personal Project'
